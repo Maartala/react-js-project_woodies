@@ -1,38 +1,258 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url("./fonts/Nunito-VariableFont_wght.ttf");
+}
+
 .App {
-  text-align: center;
+  font-size: 10px;
+  font-family: Nunito;
+  color: #3E3F43;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* HOME */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home_start_flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  margin: 9% 3% 2% 7%;
 }
 
-.App-link {
-  color: #61dafb;
+.home_start_flex section {
+  width: 50%;
+  padding-top: 1%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home_start_flex section p {
+  font-size: 2.5rem;
+}
+
+.home_start_flex section h2 {
+  font-size: 4.6rem;
+  margin-top: -2%;
+}
+
+.home_start_flex section a {
+  color: #fff;
+  background-color: #DAA520;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 1rem 2rem;
+}
+
+.img_home {
+  width: 90%
+}
+
+
+/* NAVBAR */
+
+.navBar_flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.7% 5% 2% 5%;
+}
+
+.navBar_flex nav {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  text-align: end;
+}
+
+.navBar_flex nav a {
+  padding-left: 5%;
+  font-size: 1rem;
+  color: rgba(34, 34, 34, 0.75);
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+.footer_flex {
+  background-color: #F1F1F1;
+  padding: 0 0 0 5%;
+  display: flex;
+  justify-content: space-between;
+  position: relative
+}
+
+.footer_info {
+  width: 30%;
+  padding-top: 7%;
+}
+
+.footer_flex p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+/* Etlerncontainer für Linie */
+#pos_relative {
+  position: relative;
+  z-index: 5;
+}
+
+/* horizontale Linie */
+#pos_absolute {
+  color: #C4C4C4;
+  width: 72%;
+  margin-left: 5%;
+  position: absolute;
+  z-index: 1;
+  top: 19%;
+}
+
+#c2020 {
+  align-self: flex-end;
+}
+
+#footer_image {
+  height: 100%;
+}
+
+/* ABOUT UND PRODUCTS */
+
+/* Headline generals */
+.headline_flex {
+  display: flex;
+  margin: 6% 7% 3% 7%;
+  height: 10vh;
+}
+
+/* Headline linker Teil */
+.hdl_links {
+  display: flex;
+  gap: 2%;
+  width: 31%;
+}
+
+.hdl_links img {
+  height: 50%;
+  align-self: center;
+}
+
+.hdl_links h3 {
+  font-size: 2.5rem;
+  align-self: center;
+}
+
+/* Headline Mittel-Strich */
+.linie {
+  color: #3E3F43;
+  width: 50%;
+  /* min-width: 100%; */
+  align-self: center;
+}
+
+/* Headline rechter Teil */
+.hdl_rechts {
+  align-self: center;
+  color: rgba(34, 34, 34, 0.1);
+  font-size: 6rem;
+  width: 50%;
+  text-align: end;
+}
+
+/* Content */
+
+.content_flex {
+  display: flex;
+  margin: 0 7% 5% 7%;
+}
+
+.content_links {
+  width: 40%
+}
+
+.content_links img {
+  width: 100%
+}
+
+.content_rechts {
+  width: 50%;
+  padding-left: 15%;
+}
+
+.content_rechts h3 {
+  font-size: 2.9rem;
+  font-weight: 800;
+}
+
+.content_rechts h3 span {
+  font-weight: 600;
+}
+
+.content_rechts p {
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.grid_list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: -2% 2% 4% 7%;
+  justify-items: start;
+}
+
+.product_list_item {
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-template-columns: 8fr 2.9fr;
+  grid-template-rows: 13.6fr 1.1fr;
+  grid-template-areas:
+    "Titel ."
+    ". Link";
+  width: 25vw;
+  /* padding: 40% 0; */
+  /* height: max-content; */
+  /* align-items: start; */
+  margin-bottom: 5%;
+
+}
+
+.productListItem_title {
+  /* align-self: flex-start; */
+  grid-area: Titel;
+  padding-left: 12%;
+  margin-top: 8%;
+  font-size: 2rem;
+}
+
+.product_list_item a {
+  text-decoration: none;
+  grid-area: Link;
+  margin-right: 15%;
+  color: #fff;
+  background-color: #DAA520;
+  font-size: 1rem;
+  padding: 9% 7%;
+  border-radius: 5px;
+}
+
+
+/* PRODUCT DETAILS */
+
+.productDetail_content {
+  display: flex;
+  margin: 0 7% 7% 13%;
+  justify-content: space-between;
+}
+
+.detail_content_links {
+  width: 44vw;
+}
+
+.detail_content_links img {
+  width: 66%;
+}
+
+.detail_content_rechts {
+  font-size: 2.1rem;
+  font-weight: 600;
+  padding: 6% 5% 0 0;
+  width: 50vw;
 }
